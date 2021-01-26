@@ -6,16 +6,23 @@ import CatList from './CatList'
 class App extends Component {   
   
   componentDidMount() {
-    console.log(this.props)
+    // console.log(this.props)
     this.props.fetchCats()
   }
 
+  handleLoading = () => {
+    if (this.props.loading) {
+      return <div>Loading cats...</div>
+    } else {
+      return <CatList catPics={this.props.catPics} />
+    }
+  }
+
   render() {
-    console.log(this.props.catPics) // log will fire every time App renders
     return (
       <div className="App">
         <h1>CatBook</h1>
-        <CatList catPics={this.props.catPics} />
+        {this.handleLoading()}
       </div>
     );
   }
