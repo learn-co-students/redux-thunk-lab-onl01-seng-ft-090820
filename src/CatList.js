@@ -5,7 +5,9 @@ const CatList = ({catPic}) => {
     return (
         <div>
             <p>Cat Pic </p>
-            <div>{catPic.url}</div> 
+            <div>
+                <img>{catPic.source_url}</img>
+                </div> 
         </div>
     )
     

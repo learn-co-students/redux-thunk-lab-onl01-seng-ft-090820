@@ -19,7 +19,7 @@ class App extends Component {
         <h1>CatBook</h1>
         <div>
           {catList}
-        </div>  
+        </div> 
       </div>
     );
   }
