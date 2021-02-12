@@ -11,15 +11,11 @@ class App extends Component {
   }
  
   render() {
-    const catList = this.props.catPics.map(catPic => <CatList key={catPic.id} catPic={catPic} />)
-  
     console.log(this.props.catPics) // log will fire every time App renders
     return (
       <div className="App">
         <h1>CatBook</h1>
-        <div>
-          {catList}
-        </div> 
+        <CatList catPics={this.props.catPics}/> 
       </div>
     );
   }
